@@ -1,0 +1,132 @@
+<!--Aqui comineza el codigo HTML, comenzando por el formato y el head con su contenido, es decir el contenido "no visible" por el usuario.-->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>TuListado</title>
+        <meta name="description" content="La funcionalidad de esta pagina es lograr llevar un conteo de las series que se hayan visto, y las que se veran proximamente">
+        <meta name="keywords" content="html, pagina, series, netflix, hbo, amazon, prime, show, tv ">
+        <meta name="author" content="Jorge Stillisano">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="final.css" />	
+        <script src="final.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+       
+    <!--Aqui comenzamos a escribir la primera parte de la pagina web, una barra de navegacion para ir a traves de las diferentes secciones de la pagina.-->
+           
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">TuListado</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#primer">Añadir</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#display">Tu Lista</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre mi</a>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+       
+    <!--Comienza la primer seccion de la pagina web, una imagen con un texto de bienvenida/presentacion.-->
+
+    <section id="hero">
+        <h1 class="titulo">BIENVENIDO A TULISTADO</h1>
+        <h4 class="titulito">La primera pagina web donde vas a poder llevar control total de tus series favoritas.</h4>
+    </section>
+
+     <!--Comienza la seccion con los formularios para que el usuario agregue sus series con sus respectivos datos a la plataforma, y un boton para que los pueda añadir a la lista.-->  
+    
+    <section id="primer">
+        <h2 id="titulotl">
+            Añadir a TuListado
+        </h2>
+        <form id="form" action="" class="form">
+            <div class="row g-2 mb-4 mt-3">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingTitle" placeholder="Titulo"/>
+                        <label for="floatingTitle">Titulo</label>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingPlataforma" placeholder="Plataforma"/>
+                        <label for="floatingPlataforma">Plataforma</label>
+                        <div class="input-group"></div>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">Descripcion</label>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto" id="hola">
+                <button type="submit" class="btn btn-outline-primary btn-lg">Añadir</button>
+            </div>
+        </form>
+    </section>
+
+ <!--Comienza seccion de lista, donde se vera reflejado lo que el usuario decida añadir.-->
+
+        <section id="display">
+            <h2>
+                Tu Lista
+            </h2>
+        </section>
+
+    <ul id="listahtml"></ul>
+
+     <!--Esta es la seccion que habla un poco sobre mi, y sobre quien soy. Ademas, cuenta con botones con acceso directo a las redes sociales, y un formulario para que me dejen un mensaje.-->
+    
+    <section id="about">
+        <h2>Sobre mi</h2>
+        <p>Mi nombre es Jorge Stillisano, soy un joven de 19 años, nacido en Buenos Aires. Apenas estoy comenzando mi carrera profesional, y soy estudiante de Sistemas. <br> Diseñe esta pagina con el objetivo que todos puedan llevar un seguimiento de sus series favoritas y puedan disfrutarlas al maximo. <br>Espero que les guste!</p><br>
+        <p>Los invito a seguirme en mis redes sociales!</p>
+
+        <section class="botonesredes">
+            <a href="https://www.linkedin.com/" class="fa fa-linkedin" target="blank"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram" target="blank"></a>
+        </section>
+
+        <form>
+            <div class="form-floating" id="mensaje">
+                <textarea class="form-control" placeholder="Leave a comment here" id=""></textarea>
+                <label for="floatingTextarea">Dejame aqui tu mensaje!</label>
+                <button class="btn btn-outline-primary btn-lg" id="btnfinal">Enviar</button>
+            </div>
+        </form>
+        
+    </section>
+
+        
+    <!--Para finalizar, lo hacemos con la ultima seccion donde se encuentran algunos datos de Copyright (Ficticios)-->
+    <footer>
+        <div class="container-fluid bg-light text-center p-3">
+            <p>&copy;Copyright 2022 Jorge Stillisano - TuListado - Segundo-Parcial</p>
+        </div>
+    </footer>
+
+    </body>        
+</html>
+    <!--Aqui finaliza la pagina web y el archivo html-->
+
+
+
